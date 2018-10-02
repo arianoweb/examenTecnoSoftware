@@ -1,0 +1,21 @@
+        <div >
+                    <h4>
+                        <span class="tituloEmpresa">Clientes </span>
+                        <img src="img/ico_clients.png" width="20px" />
+                    </h4>
+                    <div class="clientes" ng-repeat="cliente in clientes.clients">
+                    <spam class="infobox">
+                        <b>Nombre:</b>{{cliente.name}}</spam>
+                    <spam class="infobox">
+                        <b>Teléfono:</b>{{cliente.offices [0].phone}}</spam>
+                    <spam class="infobox">
+                    
+                                            
+                        <b>Dirección:</b>{{cliente.offices [0].address}}
+                    </spam>
+                    <spam class="infobox">
+                        <b>Pais:</b>{{cliente.offices [0].country}}</spam>
+
+                </div>
+         
+        </div>

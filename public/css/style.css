@@ -1,0 +1,207 @@
+.card-body{
+    padding-left: 5%;
+}
+
+.circulo{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    border-radius: 50%;
+    background-color: #CECECE;
+    float: right;
+    margin: 5px;
+    height: 17px;
+    width: 17px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+	text-align:center;
+    cursor:pointer;
+    margin-top: 7px;
+    margin-right: 2px;
+}
+.cerrarEmpresa{
+    position: absolute;
+    right: 20px;
+    top:70px
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: #CECECE;
+}
+.clientes {
+    border-bottom: #060843;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+h4 {
+    font-size: 18px;
+    color: #060843;
+    font-weight: normal;
+    
+}
+.tituloEmpresa{
+    padding-right: 10px;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.84);
+}
+.infobox{
+    margin-top: 10px;
+    width: 300px;
+    max-width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 11px;
+    margin-right: 100px;
+}
+.container {
+    align-content: center;
+    padding-right: 1%;
+    padding-left: 1%;
+    max-width: 1280px;
+}
+a {
+    color: #000;
+    font-size: 14px;
+}
+a:hover {
+    color: #000;
+    font-size: 14px;
+}
+.table {
+    margin-bottom: 0px;
+}
+.table th {
+    font-size: 12px;
+}
+.table 
+    .ubicacion {
+    text-align:right;
+}
+.buscador{
+          text-align:right;
+          width: 98%;
+
+       
+}
+.ubicacion{
+          text-align:right;
+
+       
+}
+
+.bg-dark {
+    background-color:#060843!important;
+}
+.card-header{
+    background-color: #fff !important;
+}
+
+h2{
+    color: #060843;
+}
+.searchform {
+    text-align:left;
+margin-top: 20px;
+width: 99%;
+max-width: 340px;
+height: 38px;
+display: inline-block;
+ 
+zoom: 1; /* ie7 hack para display:inline-block */
+ 
+*display: inline;
+ 
+border: solid 1px #d2d2d2;
+ 
+padding: 3px 5px;
+ 
+-webkit-border-radius: 2em;
+ 
+-moz-border-radius: 2em;
+ 
+border-radius: 2em;
+ 
+background: #f1f1f1;
+ 
+background: #fff;
+ 
+background: #fff;
+ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* ie7 */
+ 
+-ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* ie8 */
+ 
+}
+ 
+.searchform input {
+ 
+font: normal 12px/100% Arial, Helvetica, sans-serif;
+ 
+}
+ 
+.searchform .searchfield {
+        padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 14px;
+    font-style: italic;
+border-left-width: 5px;
+    padding-left: 4px;
+    height: 30px; 
+background: #fff;
+    vertical-align: top;
+
+ 
+width: 79%;
+max-width: 300px;
+ 
+border: solid 1px #fff;
+ 
+outline: none;
+ 
+-webkit-border-radius: 2em;
+ 
+-moz-border-radius: 2em;
+ 
+border-radius: 2em;
+ 
+
+ 
+}
+ 
+.searchform .searchbutton {
+ 
+color: #fff;
+ 
+font-size: 11px;
+ 
+height: 30px;
+ 
+width: 30px;
+ 
+-webkit-border-radius: 2em;
+ 
+-moz-border-radius: 2em;
+ 
+border-radius: 2em;
+ 
+background: #fff;
+ 
+background: #fff;
+ 
+background: #fff;
+ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9e9e9e', endColorstr='#454545'); /* ie7 */
+ 
+-ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9e9e9e', endColorstr='#454545'); /* ie8 */
+ 
+}
+body {
+  padding-top: 50px;
+}
