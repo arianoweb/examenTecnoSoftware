@@ -1,18 +1,26 @@
 {
-  "name": "Examen FronEnd",
+  "name": "examentecnosoftware",
   "version": "1.0.0",
-  "description": "TecnoSoftware",
-  "main": "index.js",
+  "description": "Examen para tecno softaware",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arianoweb/examenTecnoSoftware.git"
+  },
   "author": "Emelson Marquez",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arianoweb/examenTecnoSoftware/issues"
+  },
+  "homepage": "https://github.com/arianoweb/examenTecnoSoftware#readme",
   "dependencies": {
-    "express": "~4.7.2",
-    "morgan": "~1.2.2",
-    "body-parser": "~1.5.2",
-    "method-override": "~2.1.2"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1"
   }
 }
