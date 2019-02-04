@@ -1,0 +1,55 @@
+
+.shadow-bar{
+    -webkit-box-shadow: 3px 3px 13px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 13px -2px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 13px -2px rgba(0,0,0,0.75);
+    height: 240px;
+    background-color: #0085B0;
+}
+.medida{
+    border-color: white;
+    border-bottom-style: dashed;
+    border-top-style: dashed;
+    border-right-style: dashed;
+    width: 30px;
+    display: inline-block;
+    height: auto;
+    margin-left: 90px
+}
+.medida .figure{
+    margin-left: -100px;
+}
+.board-figure .details{
+    display: inline-block;
+    color:white;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    font-size: 12px;
+
+}
+.board-figure .details .title{
+    font-weight: 700;
+    color:white;
+ 
+}
+.board-figure .details .items{
+    margin-top: 2px;
+ 
+}
+.board-figure .presupuesto{
+    display: inline-block;
+    color:white;
+    position: absolute;
+    bottom: 20px;
+    
+    font-size: 18px;
+    right: 10px;
+
+}
+.board-figure .presupuesto .precio{
+    font-weight:bold;
+    color:white;
+    font-size: 22px;
+ 
+}

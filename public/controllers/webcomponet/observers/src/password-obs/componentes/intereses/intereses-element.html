@@ -1,0 +1,104 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../../../bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="./interes-item.html">
+<dom-module id="intereses-element">
+    <template>
+        <style>
+            :host {
+                display: block
+            }
+        </style>
+        <!--<slot></slot>  muestra lo que coloque en el cmponente definido -->
+        <template is="dom-if" if="[[!maximo]]">
+            <span>Intereses:</span><input type="text"  value="{{interes::input}}" on-keypress="_detectarEnter"/>
+        </template>
+      
+        <template is="dom-repeat" items="[[intereses]]" as="interesItem">
+            <interes-item id="[[index]]" interes="[[interesItem]]" on-borrar="borrarInteres"></interes-item>
+
+        </template>
+    </template>
+
+    <script>
+        /**
+         * `intereses-element` Description
+         *
+         * @summary ShortDescription.
+         * @customElement
+         * @polymer
+         * @extends {Polymer.Element}
+         */
+        class InteresesElement extends Polymer.Element {
+            /**
+             * String providing the tag name to register the element under.
+             */
+            static get is() {
+                return 'intereses-element';
+            }
+
+            /**
+             * Object describing property-related metadata used by Polymer features
+             */
+            static get properties() {
+                return {
+                    intereses:{
+                        type: Array,
+                        value: function(){
+                            return [];
+                            }
+                    },
+                    interes:{
+                        type:String,
+                        value:''
+                    },
+                    maximo:{
+                        type:Boolean,
+                        value:false
+                    }
+                };
+            }
+            _detectarEnter(e){
+                if (e.charCode == 13){
+                    
+                    this.push('intereses',this.interes);
+                    this.interes = '';
+                    console.log(this.intereses);
+                }
+            }
+            /**
+              * Array of strings describing multi-property observer methods and their
+              * dependant properties
+              */
+            static get observers() {
+                return [
+                    '_interesesChanged(intereses.splices)',
+                    '_interesesChangedItem(intereses.*)'
+                ];
+            }
+            _interesesChangedItem(obs){
+                console.log('intereses:', obs);
+            }
+            _interesesChanged(objArray) {
+                if (objArray && objArray.indexSplices) {
+                    console.log(objArray);
+                    if (objArray.indexSplices[0].object.length >= 3) {
+                        this.maximo = true;
+
+                    }else{
+                        this.maximo = false;
+                    }
+                }
+            }
+
+            borrarInteres(e){
+                console.log('borrar', e.detail.id);
+                //this.splice('intereses', e.detail.id,1);
+                this.set('intereses.'+e.detail.id, 'No me jodas');
+            }
+
+        }
+
+        window.customElements.define(InteresesElement.is, InteresesElement);
+    </script>
+</dom-module>

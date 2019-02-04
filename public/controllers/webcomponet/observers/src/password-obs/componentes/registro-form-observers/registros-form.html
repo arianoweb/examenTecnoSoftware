@@ -1,0 +1,101 @@
+<link rel="import" href="../password-element.html">
+<link rel="import" href="../input-bindiable.html">
+<link rel="import" href="../intereses/intereses-element.html">
+<dom-module id="registro-form">
+    <template>
+        <style>
+            :host {
+                display: block
+            }
+        </style>
+        <input-bindiable label="nombre" value="{{user.nombre}}"></input-bindiable><button on-click="borrarNombre">borrar nombre</button>
+        <br><br>
+        <input-bindiable label=email value={{user.email}}></input-bindiable>
+        <br><br>
+        <password-element></password-element>
+        <p>
+            <intereses-element></intereses-element>
+        </p>
+        <div class="nota">
+            <h2>Mostrando el dato del formulario</h2>
+            <p><span>Nombre:</span>[[user.nombre]]
+            </p>
+            <p>
+                <span>
+                    Email:
+                </span>[[user.email]]
+            </p>
+        </div>
+    </template>
+
+    <script>
+        /**
+         * `registro-form
+        ` Description
+         *
+         * @summary ShortDescription.
+         * @customElement
+         * @polymer
+         * @extends {Polymer.Element}
+         */
+        class RegistroForm extends Polymer.Element {
+            /**
+             * String providing the tag name to register the element under.
+             */
+            static get is() {
+                return 'registro-form';
+            }
+
+            /**
+             * Object describing property-related metadata used by Polymer features
+             */
+            static get properties() {
+                return {
+                    user: {
+                        type: Object,
+                        value: function () {
+                            return {
+                                nombre: '',
+                                pasword: '',
+                                email: ''
+                            }
+                        }
+                    }
+                };
+            }
+            borrarNombre(){
+                this.set('user.nombre','');
+            }
+            /**
+              * Array of strings describing multi-property observer methods and their
+              * dependant properties
+              */
+            static get observers() {
+                return [
+                    '_nameChanged(user.nombre)',
+                    '_userChanged(user.*)'
+                                    ];
+            }
+
+            _userChanged(changeRecord){ //obserrver path:comodin rutas de objetos
+                console.log('changeRecord:', changeRecord)
+            }
+            _nameChanged(nomb){
+                console.log('Nuevo Nombre es:', nomb)
+            }
+            /**
+             * Instance of the element is created/upgraded. Use: initializing state,
+             * set up event listeners, create shadow dom.
+             * @constructor
+             */
+            constructor() {
+                super();
+            }
+
+
+
+        }
+
+        window.customElements.define(RegistroForm.is, RegistroForm);
+    </script>
+</dom-module>

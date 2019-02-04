@@ -1,0 +1,77 @@
+.menu-grid-sup{
+    margin-top: 200px;
+    text-align: center;
+}
+.menu-grid{
+    margin-top: 8px;
+    text-align: center;
+}
+.menu-button-grid .title{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 100%;
+    max-width: 125px;
+}
+
+.menu-button-grid{
+    display: inline-block;
+    /*overflow: hidden;*/
+    bottom: 0px;
+    margin: 1px 2px 1px 2px;
+    width: 31%;
+    color:white;
+    position:relative;
+    height: auto;
+    font-weight: 600;
+    font-size: 11px;
+    
+}
+.button-single-menu:active
+{
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+.button-single-menu
+{
+    
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border: 0px solid #000000;
+    max-width: 125px;
+    height: 110px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 3px 3px 13px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 13px -2px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 13px -2px rgba(0,0,0,0.75);
+   
+}
+.button-single-blue{
+    background-color: #0099CC;
+}
+.button-single-orange{
+
+    background-color: #FF3300;
+}
+.button-single-green{
+        background-color: #33CC33;
+}
+.button-single-yellow{
+    background-color: #FFCC33;
+}
+.button-single-purple{
+    background-color: #993366;
+}
+.button-single-bludark{
+    background-color: #000099;
+}
+.button-single-menu .icon{
+ 
+    height: 80px
+    
+}

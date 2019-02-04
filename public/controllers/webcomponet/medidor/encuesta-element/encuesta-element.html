@@ -1,0 +1,86 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./encuesta-preguntas.html">
+<link rel="import" href="./encuesta-timer.html">
+<dom-module id="encuesta-element">
+    <template>
+        <style>
+            :host {
+                display: block
+            }
+        </style>
+    
+        <encuesta-timer on-tiempo-finalizado="cancelarEncuesta"></encuesta-timer>
+        <template is="dom-if" if="{{!cancelada}}">
+            <encuesta-preguntas cuestion="[[cuestion]]"></encuesta-preguntas>
+        </template>
+    
+    
+    
+    </template>
+
+    <script>
+        /**
+         * `encuesta-element` Description
+         *
+         * @summary ShortDescription.
+         * @customElement
+         * @polymer
+         * @extends {Polymer.Element}
+         */
+        class EncuestaElement extends Polymer.Element {
+            /**
+             * String providing the tag name to register the element under.
+             */
+            static get is() {
+                return 'encuesta-element';
+            }
+
+            /**
+             * Object describing property-related metadata used by Polymer features
+             */
+            static get properties() {
+                return {
+                    cancelada:{
+                                    type:Boolean,
+                                    value:false
+                                },
+                    cuestion: {
+                        type: Object,
+                        value: function(){
+                            return {
+
+                                pregunta: '¿Que opinas del aborto de la gallina?',
+                                opciones: [
+                                    'Me parece Fatal',
+                                    'Ella es libre de hacer lo que quiera',
+                                    'Es un apregunta absurda'
+                                ]
+                            }
+
+
+                        }
+                    }
+                };
+            }
+
+            /**
+             * Instance of the element is created/upgraded. Use: initializing state,
+             * set up event listeners, create shadow dom.
+             * @constructor
+             */
+            constructor() {
+                super();
+            }
+            cancelarEncuesta(){
+                this.cancelada = true;
+            }
+            /**
+             * Use for one-time configuration of your component after local DOM is initialized. 
+             */
+
+
+        }
+
+        window.customElements.define(EncuestaElement.is, EncuestaElement);
+    </script>
+</dom-module>

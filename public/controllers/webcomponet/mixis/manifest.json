@@ -1,0 +1,7 @@
+{
+  "name": "mixins",
+  "short_name": "mixins",
+  "description": "Clase del Curso de Polymer Mixins",
+  "start_url": "/",
+  "display": "standalone"
+}

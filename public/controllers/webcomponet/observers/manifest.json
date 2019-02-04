@@ -1,0 +1,7 @@
+{
+  "name": "password-observer",
+  "short_name": "password-observer",
+  "description": "Descripcion de uso de observers",
+  "start_url": "/",
+  "display": "standalone"
+}

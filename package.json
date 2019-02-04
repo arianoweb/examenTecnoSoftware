@@ -1,7 +1,7 @@
 {
-  "name": "examentecnosoftware",
+  "name": "littleNotes",
   "version": "1.0.0",
-  "description": "Examen para tecno softaware",
+  "description": "Examen para INCREASE",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arianoweb/examenTecnoSoftware.git"
+    "url": "git+https://github.com/arianoweb/little-notes"
   },
   "author": "Emelson Marquez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arianoweb/examenTecnoSoftware/issues"
+    "url": "https://github.com/arianoweb/little-notes/issues"
   },
-  "homepage": "https://github.com/arianoweb/examenTecnoSoftware#readme",
+  "homepage": "https://github.com/arianoweb/little-notes#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",

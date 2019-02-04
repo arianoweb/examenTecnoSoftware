@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../encuesta-element/encuesta-element.html">
+<dom-module id="medidor-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+    <encuesta-element></encuesta-element>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class MedidorApp extends Polymer.Element {
+      static get is() { return 'medidor-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'medidor-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MedidorApp.is, MedidorApp);
+  </script>
+</dom-module>

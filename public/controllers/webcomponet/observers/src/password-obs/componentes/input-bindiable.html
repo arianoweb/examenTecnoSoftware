@@ -1,0 +1,71 @@
+
+<dom-module id="input-bindiable">
+    <template>
+        <style>
+            :host {
+                display:inline-block
+            }
+        </style>
+        <span>[[label]]:</span>
+
+        <input type="text" value="{{value::input}}"/>
+        
+
+    </template>
+
+    <script>
+        /**
+         * `input-bindiable` Description
+         *
+         * @summary ShortDescription.
+         * @customElement
+         * @polymer
+         * @extends {Polymer.Element}
+         */
+        class InputBindiable extends Polymer.Element {
+            /**
+             * String providing the tag name to register the element under.
+             */
+            static get is() {
+                return 'input-bindiable';
+            }
+
+            /**
+             * Object describing property-related metadata used by Polymer features
+             */
+            static get properties() {
+                return {
+                    label:{
+                        type:String,
+                        value:''
+                    },
+                    value:{
+                        type:String,
+                        value:'',
+                        notify:true
+                    }
+                    
+                };
+            }
+
+            /**
+             * Instance of the element is created/upgraded. Use: initializing state,
+             * set up event listeners, create shadow dom.
+             * @constructor
+             */
+            constructor() {
+                super();
+            }
+
+            /**
+             * Use for one-time configuration of your component after local DOM is initialized. 
+             */
+            ready() {
+                super.ready();
+            }
+
+        }
+
+        window.customElements.define(InputBindiable.is, InputBindiable);
+    </script>
+</dom-module>

@@ -1,68 +1,41 @@
-<div>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">TecnoEmpresa</a>
-    </nav>
-    <div class="buscador">
-        <form class="searchform" ng-submit="search()">
-
-            <input class="searchbutton" type=image src="img/ico_search.png">
-            <span><input placeholder="Buscar Empresa" class="searchfield" type="text" ng-model="filtrar" /></span>
-            <div class="circulo" ng-click="filtrar=''">X</div>
-
-        </form>
-    </div>
-</div>
-
-<h2>Empresas</h2>
+<nav class="navbar navbar-expand-md fixed-top shadow-bar">
+    <details-board></details-board>
+</nav>
 
 <div class="container">
-    <div id="accordion">
-            <table class="table table-striped">
-                <tr>
-                    <th>Nombre de Empresa</th>
-                    <th class="ubicacion" >Ubicación</th>
-                </tr>
-            </table>
-        <div class="card" ng-repeat="company in listaEmpresas.companies | filter:filtrar">
-
-            <div class="card-header">
-
-                <a class="card-link" data-toggle="collapse" href="#{{company.id}}" aria-expanded="false" aria-controls="{{company.id}}">
-  
-                    <div class="cabecara">{{company.name}}</div>
-                    <span class="collapsed">
-
-                    
-
-                </a>
+    <div class="menu-grid-sup">
+        <div class="menu-button-grid">
+            <button-single color='blue' icon="icon-111.png" accion="" title="SENCILLA"></button-single>
+        </div>
+        <div class="menu-button-grid">
+            <button-single color='green' icon="icon-231.png" accion="" title="DOBLE"></button-single>
+        </div>
+        <div class="menu-button-grid">
+            <button-single color='orange' icon="icon-321.png" accion="" title="TRIPLE"></button-single>
+        </div>
+    </div>
+    <div class="menu-grid">
+            <div class="menu-button-grid">
+                <button-single color='bludark' icon="icon-dificultad.png" accion="" title="DIFICULTAD"></button-single>
             </div>
-            <div id="{{company.id}}" class="collapse">
-                <div class="card-body">
-                    <h4><span class="tituloEmpresa">Datos de la Empresa </span>
-                        <img src="img/ico_company.png" width="20px" />
-                        <div class="cerrarEmpresa"><a  data-toggle="collapse" href="#{{company.id}}" aria-controls="{{company.id}}">X</a> </div>
-                    </h4>
-                    
-                    <span class="infobox"><b>Nombre:</b>{{company.name}}</span>
-                    <span class="infobox"><b>Teléfono:</b>{{company.offices [0].phone}}</span>
-                    <span class="infobox"><b>Pais:</b>{{company.offices [0].country}}</span>
-                    <span ><div class="infobox"><b>Dirección:</b>{{company.offices [0].address}}</div></span>
-                        <br>
-
-                    <info-productos empresa=company.id></info-productos>
-<br>
-                    <lista-clientes empresa=company.id></lista-clientes>
-
-                </div>
+            <div class="menu-button-grid">
+                <button-single color='yellow' icon="icon-cubierta.png" accion="" title="CUBIERTA"></button-single>
+            </div>
+            <div class="menu-button-grid">
+                <button-single color='purple' icon="icon-decoracion.png" accion="" title="DECORACIÓN"></button-single>
             </div>
         </div>
-
-       
-
-
-
-
-    </div>
-
+        <div class="menu-grid">
+                <div class="menu-button-grid">
+                    <button-single color='orange' icon="icon-diametro.png" accion="" title="DIAMETRO"></button-single>
+                </div>
+                <div class="menu-button-grid">
+                    <button-single color='blue' icon="icon-porcion.png" accion="" title="PORCIONES"></button-single>
+                </div>
+                <div class="menu-button-grid">
+                    <button-single color='yellow' icon="icon-forma.png" accion="" title="FORMA"></button-single>
+                </div>
+            </div>
 </div>
+

@@ -1,0 +1,7 @@
+{
+  "name": "medidor",
+  "short_name": "medidor",
+  "description": "prueba de curso",
+  "start_url": "/",
+  "display": "standalone"
+}
